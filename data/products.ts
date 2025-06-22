@@ -3,19 +3,19 @@ const products = [
     id: "1",
     name: "Smartwatch X10",
     price: "$149",
-    image: "/images/watch.jpg",
+    image: "/images/smartwatch.jpg",
   },
   {
     id: "2",
     name: "Noise Cancelling Headphones",
     price: "$199",
-    image: "/images/headphones.jpg",
+    image: "/images/NoiseCancelHeadphone.jpg",
   },
   {
     id: "3",
-    name: "NextGen Smartphone",
+    name: "iPhone 16 pro max",
     price: "$899",
-    image: "/images/smartphone.jpg",
+    image: "/images/i16.jpg",
   },
   {
     id: "4",
@@ -33,7 +33,7 @@ const products = [
     id: "6",
     name: "Wireless Charger Pad",
     price: "$39",
-    image: "/images/charger.jpg",
+    image: "/images/wirelessCharger.jpg",
   },
 ];
 
