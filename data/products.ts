@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: "1",
     name: "Smartwatch X10",
@@ -43,4 +43,33 @@ const products = [
   },
 ];
 
-export default products;
+export const categories = [
+  {
+    id: 1,
+    name: "Wearables",
+    slug: "wearables",
+    description: "Wristwatches,smartwatches, fitness trackers, and wearable tech to keep you connected.",
+    image: "/images/wearable.jpg",
+  },
+  {
+    id: 2,
+    name: "Phones",
+    slug: "phones",
+    description: "Latest smartphones with powerful features and sleek designs.",
+    image: "/images/phone.jpg",
+  },
+  {
+    id: 3,
+    name: "Accessories",
+    slug: "accessories",
+    description: "Cables, chargers, cases, and other essential gadget accessories.",
+    image: "/images/accessories.jpg",
+  },
+  {
+    id: 4,
+    name: "Audio",
+    slug: "audio",
+    description: "Headphones, earbuds, and speakers with high-quality sound.",
+    image: "/images/audio.jpg",
+  },
+];
