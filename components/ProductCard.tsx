@@ -1,32 +1,27 @@
-'use client';
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 
-type Product = {
+interface ProductProps {
   id: string;
   name: string;
   price: string;
   image: string;
-};
+  category: string;
+}
 
-export default function ProductCard({ id, name, price, image }: Product) {
+export default function ProductCard({ name, price, image }: ProductProps) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="bg-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all"
-    >
+    <div className="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
       <Image
         src={image}
         alt={name}
-        width={500}
-        height={500}
-        className="object-cover w-full h-64"
+        width={400}
+        height={400}
+        className="w-full h-48 object-cover"
       />
       <div className="p-4">
-        <h3 className="font-semibold text-lg">{name}</h3>
-        <p className="text-sky-500 font-bold mt-1">{price}</p>
+        <h4 className="font-semibold text-lg">{name}</h4>
+        <p className="text-accent text-sm mt-1">{price}</p>
       </div>
-    </motion.div>
+    </div>
   );
 }
