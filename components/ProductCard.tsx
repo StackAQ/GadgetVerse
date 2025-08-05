@@ -1,26 +1,22 @@
-import Image from "next/image";
-
-interface ProductProps {
+type ProductProps = {
   id: string;
   name: string;
   price: string;
   image: string;
   category: string;
-}
+};
 
 export default function ProductCard({ name, price, image }: ProductProps) {
   return (
-    <div className="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-      <Image
+    <div className="bg-gray-100 rounded-xl shadow hover:shadow-md transition">
+      <img
         src={image}
         alt={name}
-        width={400}
-        height={400}
-        className="w-full h-48 object-cover"
+        className="w-full h-40 object-cover rounded-t-xl"
       />
       <div className="p-4">
         <h4 className="font-semibold text-lg">{name}</h4>
-        <p className="text-accent text-sm mt-1">{price}</p>
+        <p className="text-accent font-medium mt-1">{price}</p>
       </div>
     </div>
   );
