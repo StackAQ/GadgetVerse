@@ -16,7 +16,7 @@ const products = [
   {
     id: "3",
     name: "iPhone 16 Pro Max",
-    price: "$899",
+    price: "$1199",
     image: "/images/i16.jpg",
     category: "Phones",
   },
