@@ -1,46 +1,64 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Input } from '@/components/ui/input';
-import { Search, ShoppingCart, User } from 'lucide-react';
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import MobileDrawer from "./MobileDrawer";
+import CategoryMenu from "./CategoryMenu";
 
-export default function Navbar() {
+const Navbar = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
-        
-        <Link href="/" className="text-xl font-bold text-black">
+    <header className="border-b bg-white shadow-sm fixed w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Left: Logo */}
+        <Link href="/" className="text-xl font-bold">
           GadgetVerse
         </Link>
 
-        <div className="flex-1 mx-6 hidden md:flex">
-          <Input
-            type="search"
-            placeholder="Search gadgets, brands, accessories..."
-            className="w-full max-w-lg"
+        {/* Center: Search bar */}
+        <div className="hidden md:flex flex-1 mx-4 max-w-lg">
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring"
           />
         </div>
 
-        <div className="flex items-center gap-4">
-          <Link href="/account" className="flex items-center gap-1 text-sm text-black hover:text-accent">
-            <User size={20} />
-            <span className="hidden md:inline">Account</span>
-          </Link>
-          <Link href="/cart" className="relative text-black hover:text-accent">
-            <ShoppingCart size={22} />
-            {/* Optional cart badge */}
-            {/* <span className="absolute -top-1 -right-2 bg-accent text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">3</span> */}
+        {/* Right: Nav Links + Cart */}
+        <div className="hidden md:flex items-center gap-6">
+          <CategoryMenu />
+
+          <Link href="/deals">Deals</Link>
+          <Link href="/brands">Brands</Link>
+          <Link href="/support">Support</Link>
+          <Link href="/login">Login</Link>
+
+          <Link href="/cart" className="relative">
+            <ShoppingCart />
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+              3
+            </span>
           </Link>
         </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden"
+          onClick={() => setIsDrawerOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu />
+        </button>
       </div>
 
-      <nav className="bg-gray-100 py-2 px-4 text-sm hidden md:flex gap-6">
-        <Link href="/categories/phones" className="hover:text-accent">Phones</Link>
-        <Link href="/categories/wearables" className="hover:text-accent">Wearables</Link>
-        <Link href="/categories/audio" className="hover:text-accent">Audio</Link>
-        <Link href="/categories/accessories" className="hover:text-accent">Accessories</Link>
-        <Link href="/categories/computing" className="hover:text-accent">Computing</Link>
-      </nav>
+      {/* Mobile Drawer */}
+      {isDrawerOpen && (
+        <MobileDrawer onClose={() => setIsDrawerOpen(false)} />
+      )}
     </header>
   );
-}
+};
+
+export default Navbar;
