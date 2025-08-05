@@ -18,9 +18,13 @@ export default function Hero() {
     <p className="mt-4 text-lg md:text-xl text-gray-300">
       Smart Tech. Smarter Design. Explore custom gadgets like never before.
     </p>
-    <button className="mt-8 px-6 py-3 bg-accent text-black font-semibold rounded-xl shadow-lg">
-      Explore Gadgets
-    </button>
+    <motion.button
+  href="#featured"
+  whileHover={{ scale: 1.05 }}
+  className="mt-8 inline-block px-6 py-3 bg-accent text-black font-semibold rounded-xl shadow-lg transition"
+>
+  Explore Gadgets
+</motion.button>
   </div>
 </section>
   );
