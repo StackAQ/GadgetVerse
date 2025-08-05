@@ -45,31 +45,28 @@ export const products = [
 
 export const categories = [
   {
-    id: 1,
-    name: "Wearables",
-    slug: "wearables",
-    description: "Wristwatches,smartwatches, fitness trackers, and wearable tech to keep you connected.",
-    image: "/images/wearable.jpg",
+    id: 'phones',
+    name: 'Phones',
+    image: '/images/phone.jpg',
+    link: '/categories/phones',
   },
   {
-    id: 2,
-    name: "Phones",
-    slug: "phones",
-    description: "Latest smartphones with powerful features and sleek designs.",
-    image: "/images/phone.jpg",
+    id: 'wearables',
+    name: 'Wearables',
+    image: '/images/wearable.jpg',
+    link: '/categories/wearables',
   },
   {
-    id: 3,
-    name: "Accessories",
-    slug: "accessories",
-    description: "Cables, chargers, cases, and other essential gadget accessories.",
-    image: "/images/accessories.jpg",
+    id: 'audio',
+    name: 'Audio',
+    image: '/images/audio.jpg',
+    link: '/categories/audio',
   },
   {
-    id: 4,
-    name: "Audio",
-    slug: "audio",
-    description: "Headphones, earbuds, and speakers with high-quality sound.",
-    image: "/images/audio.jpg",
+    id: 'accessories',
+    name: 'Accessories',
+    image: '/images/accessories.jpg',
+    link: '/categories/accessories',
   },
+  
 ];
