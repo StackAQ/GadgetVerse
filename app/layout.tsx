@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: 'GadgetVerse - Smart Tech, Smarter Design',
+  title: 'GadgetVerse by Abdulqudus - Smart Tech, Smarter Design',
   description: 'Explore premium gadgets with lightning-fast performance and slick design.',
 };
 
