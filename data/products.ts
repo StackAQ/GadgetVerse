@@ -41,6 +41,41 @@ export const products = [
     image: "/images/wirelessCharger.jpg",
     category: "Accessories",
   },
+  {
+  id: "7",
+  name: "Samsung Galaxy Watch 6",
+  price: "$299",
+  image: "/images/samsung-galaxy-watch-6.jpg",
+  category: "Accessories",
+},
+{
+  id: "8",
+  name: "Oura Ring (Gen 4)",
+  price: "$249",
+  image: "/images/anillo-oura-ring-4.jpg",
+  category: "Accessories",
+},
+{
+  id: "9",
+  name: "Fitbit Charge 6",
+  price: "$100",
+  image: "/images/fitbit-charge-6.jpg",
+  category: "Accessories",
+},
+{
+  id: "10",
+  name: "Garmin Forerunner 265",
+  price: "$399",
+  image: "/images/garmin-forerunner-265.jpg",
+  category: "Accessories",
+},
+{
+  id: "11",
+  name: "Apple Watch Series 9",
+  price: "$329",
+  image: "/images/apple-watch-series9.jpg",
+  category: "Accessories",
+},
 ];
 
 export const categories = [
