@@ -1,6 +1,6 @@
 'use client';
 
-import { categories } from "@/data/categories";
+import { categories } from "@/data/products";
 import Link from "next/link";
 import Image from "next/image";
 
